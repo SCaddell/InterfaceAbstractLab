@@ -19,6 +19,14 @@ public abstract class CollegeCourse {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
+
+    public final String getCourseName() {
+        return courseName;
+    }
+
+    public final String getCourseNumber() {
+        return courseNumber;
+    }
     
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
