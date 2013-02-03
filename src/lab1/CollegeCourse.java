@@ -25,14 +25,6 @@ public abstract class CollegeCourse implements ProcessErrorMessage {
         this.setCourseNumber(courseNumber);
     }
 
-    public final String getCourseName() {
-        return courseName;
-    }
-
-    public final String getCourseNumber() {
-        return courseNumber;
-    }
-    
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             String errorMessage = 
@@ -51,5 +43,20 @@ public abstract class CollegeCourse implements ProcessErrorMessage {
             System.exit(0);
         }
         this.courseNumber = courseNumber;
+    }
+    
+    public final String getCourseName() {
+        return courseName;
+    }
+
+    public final String getCourseNumber() {
+        return courseNumber;
+    }
+    
+    @Override
+    public String toString() {
+        String str = "Course number = " + courseNumber
+                + "\nCourse name = " + courseName;
+        return str;
     }
 }
