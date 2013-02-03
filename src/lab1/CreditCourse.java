@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab1;
 
 import javax.swing.JOptionPane;
@@ -15,8 +11,8 @@ public class CreditCourse extends CollegeCourse {
     private double credits;
     private String prerequisites;
     
-    public CreditCourse(String courseName, String courseNumber) {
-        super(courseName, courseNumber);
+    public CreditCourse(String courseNumber, String courseName) {
+        super(courseNumber, courseName);
         this.credits = 0.5;
         this.prerequisites = "None"; 
     }
@@ -28,7 +24,7 @@ public class CreditCourse extends CollegeCourse {
             displayErrorMessage(errorMessage);
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
     
     public void setPrerequisites(String prerequisites) {
@@ -41,9 +37,25 @@ public class CreditCourse extends CollegeCourse {
         }
         this.prerequisites = prerequisites;
     }
+
+    public double getCredits() {
+        return credits;
+    }
+
+    public String getPrerequisites() {
+        return prerequisites;
+    }
     
     public void displayErrorMessage(String errorMessage) {
         JOptionPane.showMessageDialog(null, errorMessage);
+    }
+    
+    @Override
+    public String toString() {
+        String str = super.toString()
+                + "\nCredits = " + credits
+                + "\nPrerequisites = " + prerequisites;
+        return str;
     }
     
 }

@@ -20,9 +20,9 @@ public abstract class CollegeCourse implements ProcessErrorMessage {
         this.courseNumber = "";
     }
     
-    public CollegeCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
+    public CollegeCourse(String courseNumber, String courseName) {
         this.setCourseNumber(courseNumber);
+        this.setCourseName(courseName);
     }
 
     public final void setCourseName(String courseName) {
