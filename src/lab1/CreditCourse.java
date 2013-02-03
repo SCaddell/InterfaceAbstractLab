@@ -16,8 +16,7 @@ public class CreditCourse extends CollegeCourse {
     private String prerequisites;
     
     public CreditCourse(String courseName, String courseNumber) {
-        super.setCourseName(courseName);
-        super.setCourseNumber(courseNumber);
+        super(courseName, courseNumber);
     }
     
     public void setCredits(double credits) {

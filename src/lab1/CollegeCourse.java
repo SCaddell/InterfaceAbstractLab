@@ -15,6 +15,11 @@ public abstract class CollegeCourse {
     private String courseName;
     private String courseNumber;
     
+    public CollegeCourse() {
+        this.courseName = "";
+        this.courseNumber = "";
+    }
+    
     public CollegeCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
