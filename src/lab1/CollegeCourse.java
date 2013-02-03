@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author Stuart - HP AMD 10
  */
-public abstract class CollegeCourse {
+public abstract class CollegeCourse implements ProcessErrorMessage {
     
     private String courseName;
     private String courseNumber;
@@ -35,8 +35,9 @@ public abstract class CollegeCourse {
     
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: course name cannot be null or empty string");
+            String errorMessage = 
+                    "Error: course name cannot be null or empty string";
+            displayErrorMessage(errorMessage);
             System.exit(0);
         }
         this.courseName = courseName;
@@ -44,8 +45,9 @@ public abstract class CollegeCourse {
     
     public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: course number cannot be null or empty string");
+            String errorMessage = 
+                    "Error: course number cannot be null or empty string";
+            displayErrorMessage(errorMessage);
             System.exit(0);
         }
         this.courseNumber = courseNumber;
