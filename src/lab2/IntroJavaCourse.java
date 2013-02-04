@@ -7,7 +7,7 @@ package lab2;
  * @version     1.00
  */
 public class IntroJavaCourse implements CreditCourse {
-    String courseName;
+    private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
