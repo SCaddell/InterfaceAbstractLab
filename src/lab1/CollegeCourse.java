@@ -8,17 +8,17 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Stuart - HP AMD 10
+ * @author Stuart Caddell
  */
 public abstract class CollegeCourse implements ProcessErrorMessage {
     
     private String courseName;
     private String courseNumber;
     
-    public CollegeCourse() {
-        this.courseName = "";
-        this.courseNumber = "";
-    }
+    //public CollegeCourse() {      // not needed, left in for future reference
+    //    this.courseName = "";
+    //    this.courseNumber = "";
+    //}
     
     public CollegeCourse(String courseNumber, String courseName) {
         this.setCourseNumber(courseNumber);
