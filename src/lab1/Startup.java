@@ -12,6 +12,12 @@ public class Startup {
     
     public static void main(String[] args) {
         
+        /*
+         * I tried creating IntroToProgramming as a CollegeCourse type instead
+         * of a CreditCourse type, but then I did not seem to have access to 
+         * some of the CreditCourse methods.
+         */
+        
         CreditCourse introToProgramming = new CreditCourse("105-005",
                 "Intro to Programming");
         introToProgramming.setCredits(4.0);

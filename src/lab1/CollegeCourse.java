@@ -10,6 +10,15 @@ import javax.swing.JOptionPane;
  *
  * @author Stuart Caddell
  */
+
+// started/written before reading the DIP article
+
+/*
+ * Advantages are (over concrete) it forces required functionality.  It also
+ * forces initial validation requirements on all future subclasses of the class.
+ * By doiing so though, it does build in a certain amount of rigidity into the 
+ * class.
+ */
 public abstract class CollegeCourse implements ProcessErrorMessage {
     
     private String courseName;
